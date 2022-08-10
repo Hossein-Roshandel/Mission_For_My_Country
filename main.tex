@@ -1,0 +1,59 @@
+\documentclass[a5paper,12pt]{book}
+\usepackage{authblk}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+
+
+\usepackage[colorlinks]{hyperref}
+\usepackage{glossaries}
+
+
+\usepackage{xepersian}
+\settextfont{XB Niloofar}
+
+
+\makenoidxglossaries
+\include{./TeX_files/glossaries}
+\begin{document}
+	\font\authorfont={XB Niloofar} at 20pt
+	\font\titlefont={IranNastaliq} at 80pt
+	\author{{\authorfont اعلیحضرت همایون محمدرضاشاه پهلوی}}
+	\affil{{\authorfont شاهنشاه ایران}}		 
+				 
+	\title{\titlefont{مأموریت برای وطنم}}
+    \date{1339\\ چاپخانه ارتش}
+	
+	
+	\frontmatter
+	\includepdf[pages={1}]{Mission_Book.pdf}
+	{\let\newpage\relax
+		\maketitle
+	}
+	\tableofcontents
+
+	\include{./TeX_files/preface}
+		
+	\mainmatter
+	\include{./TeX_files/chapter01}
+	\include{./TeX_files/chapter02}
+	\include{./TeX_files/chapter03}
+	\include{./TeX_files/chapter04}
+	\include{./TeX_files/chapter05}
+	\include{./TeX_files/chapter06}
+	\include{./TeX_files/chapter07}
+	\include{./TeX_files/chapter08}
+	\include{./TeX_files/chapter09}
+	\include{./TeX_files/chapter10}
+	\include{./TeX_files/chapter11}
+	\include{./TeX_files/chapter12}
+	\include{./TeX_files/chapter13}
+	\include{./TeX_files/chapter14}
+	
+	\backmatter
+	% bibliography, glossary and index would go here.
+	%
+	\clearpage
+	\printnoidxglossary[title=فهرست نام‌ها, toctitle=فهرست نام‌ها]
+	\clearpage
+\includepdf[pages={451}]{Mission_Book.pdf}
+\end{document}

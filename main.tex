@@ -6,9 +6,11 @@
 
 \usepackage[colorlinks]{hyperref}
 \usepackage{glossaries}
+\usepackage{makeidx}
+\makeindex
 
 
-\usepackage{xepersian}
+\usepackage[quickindex-variant2]{xepersian}
 \settextfont{XB Niloofar}
 
 
@@ -55,5 +57,6 @@
 	\clearpage
 	\printnoidxglossary[title=فهرست نام‌ها, toctitle=فهرست نام‌ها]
 	\clearpage
+	\printindex
 \includepdf[pages={451}]{Mission_Book.pdf}
 \end{document}
